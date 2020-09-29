@@ -9,12 +9,6 @@
     <!--  （xml命名空间）xmlns：prefix=“url”-->
     <!--  需要使用的namespace必须在xsi:schemaLocation中添加-->
     <context:component-scan base-package="core.entity"></context:component-scan>
-    <!-- scope="prototype" 多例模式，每从容器中获取bean时，都会创建新对象。默认是单例模式-->
-    <!-- 单例模式
-      -实现方式涉及几项考虑（是否懒加载，是否线程安全，效率）
-      -单例对象中声明非常量属性，存在线程安全问题
-      -线程安全解决方法：多例，ThreadLocal
-    -->
     <bean id="student" class="core.entity.Student" scope="prototype">
         <property name="stuNo" value="2"></property>
         <property name="stuName" value="ls"></property>
