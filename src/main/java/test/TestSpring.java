@@ -12,9 +12,10 @@ public class TestSpring {
 //        stu.setStuAge(18);
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
         Student stu1=(Student) context.getBean("student");
-        Student stu2=(Student) context.getBean("student");
+        stu1.setHobby(null);
+/*        Student stu2=(Student) context.getBean("student");
         System.out.println(stu1);
-        System.out.println(stu2);
-        //stu.showHobby("ballHobby");
+        System.out.println(stu2);*/
+        stu1.showHobby("ballHobby");
     }
 }
